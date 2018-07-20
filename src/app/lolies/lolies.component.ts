@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Loli } from "../loli";
+import { LOLIES } from "../mock-lolies";
 
 @Component({
   selector: "app-lolies",
@@ -7,10 +8,11 @@ import { Loli } from "../loli";
   styleUrls: ["./lolies.component.css"]
 })
 export class LoliesComponent implements OnInit {
-  loli: Loli = {
-    id: 1,
-    name: "Hiiragi Kagami"
-  };
+  lolies = LOLIES;
+  selectedLoli: Loli;
+  onSelect(loli: Loli): void {
+    this.selectedLoli = loli;
+  }
   constructor() {}
 
   ngOnInit() {}
