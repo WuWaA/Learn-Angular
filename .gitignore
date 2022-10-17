@@ -35,6 +35,7 @@ testem.log
 /typings
 CachedData
 logs
+*/cache
 
 # System Files
 .DS_Store
